@@ -4,9 +4,14 @@ import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
-const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
-const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
-const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+const EMAILJS_SERVICE_ID =
+  process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
+
+const EMAILJS_TEMPLATE_ID =
+  process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
+
+const EMAILJS_PUBLIC_KEY =
+  process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
 
 type Status = "idle" | "sending" | "success" | "error";
 
@@ -117,7 +122,7 @@ export default function Contact() {
               {/* Email */}
               <div className="flex flex-col gap-1.5">
                 <label className="text-xs uppercase tracking-[0.08em] text-[var(--ink-faint)]">
-                  Email
+                  Tu correo
                 </label>
 
                 <input
