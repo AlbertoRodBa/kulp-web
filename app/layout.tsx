@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "Kulp | Diseño web para proyectos con propósito",
   description:
     "Páginas web para instituciones públicas y privadas. Sitios institucionales, consultoría técnica y branding digital.",
-keywords: [
+  icons: {
+    icon: "/icon-192x192.png",
+  },
+  keywords: [
   "diseño web institucional Chile",
   "desarrollo web municipalidades",
   "agencia UX UI Chile",
