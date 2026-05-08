@@ -46,7 +46,7 @@ function AccordionItem({ project }: { project: (typeof projects)[0] }) {
     <div className="border-b border-[var(--cream-300)]">
       <button
         onClick={() => setOpen(!open)}
-        className="w-full group flex items-start justify-between py-8 md:py-10 text-left hover:bg-[var(--cream-100)] -mx-6 md:-mx-10 px-6 md:px-10 transition-colors duration-200"
+        className="w-full group flex items-start justify-between py-8 md:py-10 text-left hover:bg-[var(--cream-100)] md:-mx-10 px-6 md:px-10 transition-colors duration-200"
         aria-expanded={open}
       >
         <div className="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-8">
@@ -93,7 +93,7 @@ function AccordionItem({ project }: { project: (typeof projects)[0] }) {
         className={`accordion-content ${open ? "open" : ""}`}
         aria-hidden={!open}
       >
-        <div className="pb-8 pl-0 md:pl-[calc(3rem+2rem)] pr-6 md:pr-10 -mx-6 md:-mx-10 px-6 md:px-10">
+        <div className="pb-8 pl-0 md:pl-[calc(3rem+2rem)] pr-6 md:pr-10 md:-mx-10 px-6 md:px-10">
           <p className="text-base font-light text-[var(--ink-muted)] leading-relaxed max-w-2xl mb-6">
             {project.description}
           </p>
