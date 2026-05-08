@@ -143,7 +143,7 @@ export default function Projects() {
   return (
     <section
       id="proyectos"
-      className="bg-[var(--cream-100)] pt-1 pb-6 md:pt-20 md:pb-[6.25rem]"
+      className="bg-[var(--cream-100)] pt-16 pb-6 md:pt-20 md:pb-[6.25rem]"
     >
       <motion.div
         initial={{ opacity: 0, y: 30 }}
