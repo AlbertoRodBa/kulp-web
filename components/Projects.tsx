@@ -33,7 +33,7 @@ const projects = [
     year: "2024",
     link: "https://piimep.penaflor.cl",
     description:
-      "Plataforma para el Plan Integral de Infraestructura de Movilidad y Espacio Público (PIIMEP). El sitio centraliza la visualización de proyectos urbanos, diagnósticos territoriales y herramientas de consulta para mejorar la conectividad y calidad de vida en la comuna.",
+      "Sitio web para informar sobre el Plan de Inversiones de Infraestructura de Movilidad y Espacio Público (PIIMEP) para la Municipalidad de Peñaflor. La plataforma permitió difundir avances del proceso, actividades de participación ciudadana y contenidos relacionados al desarrollo urbano de la comuna.",
     image: "/project-3-piimep-penaflor.jpg",
     tags: ["Infraestructura", "Movilidad Urbana"],
   },

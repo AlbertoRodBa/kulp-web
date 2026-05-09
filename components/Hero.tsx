@@ -24,7 +24,7 @@ export default function Hero() {
               </h1>
 
               <h2 className="text-lg md:text-xl font-light text-[var(--ink-muted)] max-w-lg leading-relaxed mb-12 transition-all duration-500 group-hover:text-[var(--ink)] group-hover:translate-x-1">
-                Diseño, desarrollo, comunicación digital y mantención de sitios web modernos y accesibles.
+                Diseño, desarrollo y comunicación digital para proyectos, organizaciones y marcas.
               </h2>
             </div>
 

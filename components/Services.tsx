@@ -19,14 +19,14 @@ const services = [
   {
     title: "Consultoría y Soporte",
     description:
-      "Asesoría técnica y mantenimiento continuo para asegurar que tu plataforma funcione de manera óptima.",
+      "Asesoría técnica, mantenimiento continuo y actualización de contenidos para asegurar que tu sitio esté al día",
     tag: null,
     icon: faUserCog,
   },
   {
     title: "Branding Digital",
     description:
-      "Construcción de identidad visual coherente para tu marca: desde la paleta de colores y tipografía hasta la presencia en redes y materiales digitales.",
+      "Construcción de identidad visual coherente para tu marca: desde la paleta de colores y tipografía hasta su presencia enredes y materiales digitales.",
     tag: null,
     icon: faPalette,
   },
