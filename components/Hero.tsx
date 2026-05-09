@@ -64,28 +64,28 @@ export default function Hero() {
           </div>
 
           <div className="flex justify-center lg:justify-end order-1 lg:order-2 opacity-0 animate-fade-in-delay">
-            <motion.img
-              src="/hero-img.png"
-              alt="Hero image"
-              initial={{
-                filter: "grayscale(100%) brightness(0.95)",
-                scale: 1,
-              }}
-              whileInView={{
-                filter: "grayscale(0%) brightness(1)",
-                scale: 1,
-              }}
-              viewport={{ once: true, amount: 0.4 }}
-              transition={{
-                duration: 1.2,
-                ease: "easeOut",
-              }}
-              whileHover={{
-                scale: 1.02,
-                filter: "grayscale(0%) brightness(1.05)",
-              }}
-              className="w-full max-w-xs md:max-w-sm lg:max-w-md h-auto object-contain"
-            />
+           <motion.img
+  src="/hero-img.png"
+  alt="Hero image"
+  initial={{
+    filter: "grayscale(100%) brightness(0.95)",
+    scale: 1,
+  }}
+  whileInView={{
+    filter: "grayscale(0%) brightness(1)",
+    scale: 1,
+  }}
+  viewport={{ once: true, amount: 0.4 }}
+  transition={{
+    duration: 1.8,
+    ease: [0.22, 1, 0.36, 1],
+  }}
+  whileHover={{
+    scale: 1.02,
+    filter: "grayscale(0%) brightness(1.05)",
+  }}
+  className="w-full max-w-xs md:max-w-sm lg:max-w-md h-auto object-contain"
+/>
           </div>
 
         </div>
