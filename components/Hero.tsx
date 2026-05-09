@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 export default function Hero() {
   const imgRef = useRef<HTMLImageElement>(null);
@@ -80,17 +81,21 @@ export default function Hero() {
           </div>
 
           <div className="flex justify-center lg:justify-end order-1 lg:order-2 opacity-0 animate-fade-in-delay">
-            <img
-              ref={imgRef}
-              src="/hero-img.png"
-              alt="Hero image"
-              className={`
-                w-full max-w-xs md:max-w-sm lg:max-w-md h-auto object-contain
-                transition-all duration-700 ease-out
-                hover:scale-[1.02] hover:brightness-105
-                ${hasAppeared ? "grayscale-0" : "grayscale"}
-              `}
-            />
+            <div className="w-full max-w-xs md:max-w-sm lg:max-w-md aspect-square">
+              <Image
+                ref={imgRef}
+                src="/hero-img.png"
+                alt="Hero image"
+                width={500}
+                height={500}
+                className={`
+                  w-full h-full object-contain
+                  transition-all duration-700 ease-out
+                  hover:scale-[1.02] hover:brightness-105
+                  ${hasAppeared ? "grayscale-0" : "grayscale"}
+                `}
+              />
+            </div>
           </div>
 
         </div>
