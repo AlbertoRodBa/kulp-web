@@ -11,7 +11,7 @@ const projects = [
     year: "2026",
     link: "https://pladecocerrillos.participayplanifica.cl",
     description:
-      "Página web para la gestión del Plan de Desarrollo Comunal (PLADECO) de Cerrillos. Permite la visualización de objetivos estratégicos y el seguimiento ciudadano de etapas y actividades ciudadanas, fortaleciendo la transparencia del proceso",
+      "Página web para la gestión del Plan de Desarrollo Comunal (PLADECO) de Cerrillos. Permite la visualización de objetivos estratégicos y el seguimiento de etapas y actividades ciudadanas, fortaleciendo la transparencia del proceso.",
     image: "/project-1-pladeco-cerrillos.jpg",
     tags: ["Participación Ciudadana", "Desarrollo Local"],
   },
@@ -35,7 +35,7 @@ const projects = [
     description:
       "Sitio web para informar sobre el Plan de Inversiones de Infraestructura de Movilidad y Espacio Público (PIIMEP) para la Municipalidad de Peñaflor. La plataforma permitió difundir avances del proceso, actividades de participación ciudadana y contenidos relacionados al desarrollo urbano de la comuna.",
     image: "/project-3-piimep-penaflor.jpg",
-    tags: ["Infraestructura", "Movilidad Urbana"],
+    tags: ["Planificación Urbana", "Participación Ciudadana"],
   },
 ];
 
