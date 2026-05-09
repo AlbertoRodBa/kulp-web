@@ -19,7 +19,7 @@ const services = [
   {
     title: "Consultoría y Soporte",
     description:
-      "Asesoría técnica, mantenimiento continuo y actualización de contenidos para asegurar que tu sitio esté al día",
+      "Asesoría técnica, mantenimiento continuo y actualización de contenidos para asegurar que tu sitio esté al día.",
     tag: null,
     icon: faUserCog,
   },
@@ -34,10 +34,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section
-      id="servicios"
-      className="bg-[var(--cream-50)] py-16 md:py-20"
-    >
+    <section id="servicios" className="bg-[var(--cream-50)] py-16 md:py-20">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -70,7 +67,7 @@ export default function Services() {
               <div className="flex items-start justify-center w-8 md:w-6 shrink-0 mt-1">
                 <FontAwesomeIcon
                   icon={s.icon}
-                  className="text-xl md:text-lg text-[var(--ink-faint)] group-hover:text-[var(--ink)] transition-colors duration-200"
+                  className="text-xl md:text-lg text-[#5a5a5a] hover:text-[var(--ink)] transition-colors duration-200"
                 />
               </div>
 
