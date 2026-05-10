@@ -56,7 +56,7 @@ export default function Contact() {
           </h2>
 
           <p className="hidden md:block text-sm font-light text-[var(--ink-faint)]">
-            Hablemos
+            ¡Hablemos!
           </p>
         </div>
 
