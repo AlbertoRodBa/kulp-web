@@ -26,7 +26,7 @@ const services = [
   {
     title: "Branding Digital",
     description:
-      "Construcción de identidad visual coherente para tu marca: desde la paleta de colores y tipografía hasta su presencia enredes y materiales digitales.",
+      "Construcción de identidad visual y mensaje coherente para tu marca: desde la paleta de colores, tipografía hasta su presencia en redes y materiales digitales.",
     tag: null,
     icon: faPalette,
   },
