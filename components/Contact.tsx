@@ -4,14 +4,11 @@ import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
-const EMAILJS_SERVICE_ID =
-  process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
+const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
 
-const EMAILJS_TEMPLATE_ID =
-  process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
+const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
 
-const EMAILJS_PUBLIC_KEY =
-  process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
+const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
 
 type Status = "idle" | "sending" | "success" | "error";
 
@@ -30,7 +27,7 @@ export default function Contact() {
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
         formRef.current,
-        EMAILJS_PUBLIC_KEY
+        EMAILJS_PUBLIC_KEY,
       );
 
       setStatus("success");
@@ -148,7 +145,8 @@ export default function Contact() {
                 <option value="">Selecciona una opción</option>
                 <option value="web">Sitio web</option>
                 <option value="redesign">Rediseño web</option>
-                <option value="branding">Branding</option>
+                <option value="content">Actualización de contenidos</option>
+                <option value="branding">Branding (identidad visual)</option>
                 <option value="otro">Otro</option>
               </select>
             </div>
@@ -175,21 +173,15 @@ export default function Contact() {
                 disabled={status === "sending"}
                 className="px-8 py-4 bg-[var(--ink)] text-[var(--cream-50)] text-sm hover:bg-[var(--ink-muted)] transition"
               >
-                {status === "sending"
-                  ? "Enviando..."
-                  : "Enviar mensaje"}
+                {status === "sending" ? "Enviando..." : "Enviar mensaje"}
               </button>
 
               {status === "success" && (
-                <p className="text-sm text-green-700">
-                  Mensaje enviado
-                </p>
+                <p className="text-sm text-green-700">Mensaje enviado</p>
               )}
 
               {status === "error" && (
-                <p className="text-sm text-red-600">
-                  Error al enviar
-                </p>
+                <p className="text-sm text-red-600">Error al enviar</p>
               )}
             </div>
           </form>
