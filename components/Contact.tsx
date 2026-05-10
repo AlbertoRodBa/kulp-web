@@ -108,7 +108,7 @@ export default function Contact() {
               {/* Marca / proyecto */}
               <div className="flex flex-col gap-1.5">
                 <label className="text-xs uppercase tracking-[0.08em] text-[var(--ink-faint)]">
-                  Marca / Proyecto
+                  Proyecto / Marca
                 </label>
 
                 <input
