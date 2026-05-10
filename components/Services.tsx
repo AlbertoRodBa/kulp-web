@@ -17,16 +17,16 @@ const services = [
     icon: faDesktop,
   },
   {
-    title: "Consultoría y Soporte",
+    title: "Soporte y actualización",
     description:
-      "Asesoría técnica, mantenimiento continuo y actualización de contenidos para asegurar que tu sitio esté al día.",
+      "Mantenimiento, ajustes y apoyo técnico para mantener tu sitio actualizado, funcionando correctamente y con contenidos al día.",
     tag: null,
     icon: faUserCog,
   },
   {
     title: "Branding Digital",
     description:
-      "Construcción de identidad visual y mensaje coherente para tu marca: desde la paleta de colores, tipografía hasta su presencia en redes y materiales digitales.",
+      "Definición de estilo visual y coherencia digital para tu proyecto: colores, tipografías, mensajes y presencia online.",
     tag: null,
     icon: faPalette,
   },
