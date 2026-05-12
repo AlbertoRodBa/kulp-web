@@ -11,7 +11,7 @@ const projects = [
     year: "2026",
     link: "https://pladecocerrillos.participayplanifica.cl",
     description:
-      "Página web para la gestión del Plan de Desarrollo Comunal (PLADECO) de Cerrillos. Permite la visualización de objetivos estratégicos y el seguimiento de etapas y actividades ciudadanas, fortaleciendo la transparencia del proceso.",
+      "Página web para la gestión del Plan de Desarrollo Comunal (PLADECO) de Cerrillos. Permitió la visualización de objetivos estratégicos, seguimiento de etapas y calendario de actividades ciudadanas, fortaleciendo la transparencia del proceso.",
     image: "/project-1-pladeco-cerrillos.jpg",
     tags: ["Participación Ciudadana", "Desarrollo Local"],
   },
