@@ -64,7 +64,7 @@ export default function Services() {
               className="group py-10 md:py-12 flex flex-row items-start gap-4 md:gap-12 hover:bg-[var(--cream-100)] -mx-6 md:-mx-10 px-6 md:px-10 transition-colors duration-200"
             >
               {/* Icon */}
-              <div className="flex items-start justify-center w-8 md:w-6 shrink-0 mt-1">
+              <div className="flex items-start justify-center w-8 md:w-6 shrink-0 mt-2 xl:mt-3">
                 <FontAwesomeIcon
                   icon={s.icon}
                   className="text-xl md:text-lg text-[#5a5a5a] hover:text-[var(--ink)] transition-colors duration-200"
