@@ -36,7 +36,7 @@ const projects = [
 
 export default function PortafolioPage() {
   return (
-    <main className="min-h-screen bg-[var(--cream-100)] pt-18 pb-20">
+    <main className="min-h-screen bg-[var(--cream-100)] pt-28 pb-20">
       <section className="max-w-6xl mx-auto px-6 md:px-10">
         {/* Header */}
         <div className="border-b border-[var(--cream-300)] pb-8 mb-14">
