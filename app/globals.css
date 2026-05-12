@@ -4,9 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
 :root {
-  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-display: 'Montserrat', sans-serif;
   --font-body: 'DM Sans', system-ui, sans-serif;
+
   --cream-50: #FAFAF7;
   --cream-100: #F5F4EF;
   --cream-200: #EDECEA;
@@ -15,7 +18,6 @@
   --ink-muted: #4a4844;
   --ink-faint: #8a8780;
 }
-
 html {
   scroll-behavior: smooth;
 }
