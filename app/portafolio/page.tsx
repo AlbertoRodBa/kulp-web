@@ -36,7 +36,7 @@ const projects = [
 
 export default function PortafolioPage() {
   return (
-    <main className="min-h-screen bg-[var(--cream-100)] pt-28 pb-20">
+    <main className="min-h-screen bg-[var(--cream-100)] pt-18 pb-20">
       <section className="max-w-6xl mx-auto px-6 md:px-10">
         {/* Header */}
         <div className="border-b border-[var(--cream-300)] pb-8 mb-14">
@@ -51,8 +51,8 @@ export default function PortafolioPage() {
             Portafolio
           </h1>
 
-          <p className="mt-5 text-base md:text-lg font-light text-[var(--ink-muted)] max-w-2xl leading-relaxed">
-            Proyectos web desarrollados:
+          <p className="mt-3 text-base md:text-lg font-light text-[var(--ink-muted)] max-w-2xl leading-relaxed">
+            Proyectos desarrollados para fortalecer la presencia digital, con foco en diseño, contenido y usabilidad.
           </p>
         </div>
 
