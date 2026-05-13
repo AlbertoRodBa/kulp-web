@@ -41,9 +41,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body>
+        {children}
 
-      <GoogleTagManager gtmId="GTM-5M24MCLP" /> 
+        {/* Google Tag Manager */}
+        <GoogleTagManager gtmId="GTM-5M24MCLP" />
+      </body>
     </html>
   );
 }
