@@ -5,9 +5,7 @@ import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
 const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
-
 const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
-
 const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
 
 type Status = "idle" | "sending" | "success" | "error";
@@ -27,7 +25,7 @@ export default function Contact() {
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
         formRef.current,
-        EMAILJS_PUBLIC_KEY,
+        EMAILJS_PUBLIC_KEY
       );
 
       setStatus("success");
@@ -55,7 +53,7 @@ export default function Contact() {
             Contacto
           </h2>
 
-          <p className="hidden md:block text-sm font-light text-[var(--ink-faint)]">
+          <p className="hidden md:block text-sm font-light text-[var(--ink-muted)]">
             ¡Hablemos!
           </p>
         </div>
@@ -71,8 +69,7 @@ export default function Contact() {
             </h3>
 
             <p className="text-base font-light text-[var(--ink-muted)] leading-relaxed mb-10">
-              Cuéntame sobre tu proyecto y veamos cómo comunicarlo de forma
-              clara y profesional.
+              Cuéntame sobre tu proyecto y veamos cómo comunicarlo de forma clara y profesional.
             </p>
 
             <div className="flex items-center gap-3 group">
@@ -102,24 +99,25 @@ export default function Contact() {
             className="flex flex-col gap-5"
           >
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              {/* Marca / proyecto */}
+              {/* Proyecto / Marca */}
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs uppercase tracking-[0.08em] text-[var(--ink-faint)]">
-                  Proyecto / Marca
+                <label className="text-xs uppercase tracking-[0.08em] text-[var(--ink-muted)]">
+                  Proyecto / Marca <span className="ml-1 opacity-50">*</span>
                 </label>
 
                 <input
                   name="user_company"
                   type="text"
+                  required
                   placeholder="Nombre de tu proyecto o marca"
-                  className="bg-transparent border-b border-[var(--cream-300)] py-3 text-sm focus:border-[var(--ink)] outline-none"
+                  className="bg-transparent border-b border-[var(--cream-300)] py-3 text-sm text-[var(--ink)] focus:border-[var(--ink)] outline-none"
                 />
               </div>
 
               {/* Email */}
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs uppercase tracking-[0.08em] text-[var(--ink-faint)]">
-                  Tu correo
+                <label className="text-xs uppercase tracking-[0.08em] text-[var(--ink-muted)]">
+                  Tu correo <span className="ml-1 opacity-50">*</span>
                 </label>
 
                 <input
@@ -127,14 +125,14 @@ export default function Contact() {
                   type="email"
                   required
                   placeholder="correo@mail.com"
-                  className="bg-transparent border-b border-[var(--cream-300)] py-3 text-sm focus:border-[var(--ink)] outline-none"
+                  className="bg-transparent border-b border-[var(--cream-300)] py-3 text-sm text-[var(--ink)] focus:border-[var(--ink)] outline-none"
                 />
               </div>
             </div>
 
-            {/* Combo box */}
+            {/* Select */}
             <div className="flex flex-col gap-1.5">
-              <label className="text-xs uppercase tracking-[0.08em] text-[var(--ink-faint)]">
+              <label className="text-xs uppercase tracking-[0.08em] text-[var(--ink-muted)]">
                 ¿Qué necesitas?
               </label>
 
@@ -146,15 +144,15 @@ export default function Contact() {
                 <option value="web">Sitio web</option>
                 <option value="redesign">Rediseño web</option>
                 <option value="content">Actualización de contenidos</option>
-                <option value="branding">Branding (identidad visual)</option>
+                <option value="branding">Branding (Identidad visual)</option>
                 <option value="otro">Otro</option>
               </select>
             </div>
 
             {/* Mensaje */}
             <div className="flex flex-col gap-1.5">
-              <label className="text-xs uppercase tracking-[0.08em] text-[var(--ink-faint)]">
-                Mensaje
+              <label className="text-xs uppercase tracking-[0.08em] text-[var(--ink-muted)]">
+                Mensaje <span className="ml-1 opacity-50">*</span>
               </label>
 
               <textarea
@@ -162,7 +160,7 @@ export default function Contact() {
                 required
                 rows={4}
                 placeholder="Cuéntame qué necesitas o qué te gustaría mejorar"
-                className="bg-transparent border-b border-[var(--cream-300)] py-3 text-sm focus:border-[var(--ink)] outline-none resize-none"
+                className="bg-transparent border-b border-[var(--cream-300)] py-3 text-sm text-[var(--ink)] focus:border-[var(--ink)] outline-none resize-none"
               />
             </div>
 
