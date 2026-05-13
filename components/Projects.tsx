@@ -22,7 +22,7 @@ const projects = [
     year: "2025",
     link: "https://prcquintero.participayplanifica.cl",
     description:
-      "Sitio institucional para la difusión del Plan Regulador Comunal. La plataforma permite a los vecinos acceder a la normativa urbana, cartografía interactiva y noticias del proceso de actualización del PRC, fomentando igualmente la participación ciudadana en actividades.",
+      "Sitio institucional para la difusión del Plan Regulador Comunal. La plataforma permite a los vecinos acceder a la normativa urbana, cartografía interactiva y noticias del proceso de actualización del PRC.",
     image: "/project-2-prc-quintero.jpg",
     tags: ["Planificación Urbana", "Participación Ciudadana"],
   },
@@ -33,7 +33,7 @@ const projects = [
     year: "2024",
     link: "https://piimep.penaflor.cl",
     description:
-      "Sitio web para informar sobre el Plan de Inversiones de Infraestructura de Movilidad y Espacio Público (PIIMEP) para la Municipalidad de Peñaflor. La plataforma permitió difundir avances del proceso, actividades de participación ciudadana y contenidos relacionados al desarrollo urbano de la comuna.",
+      "Sitio web para informar sobre el Plan de Inversiones de Infraestructura de Movilidad y Espacio Público (PIIMEP) de Peñaflor.",
     image: "/project-3-piimep-penaflor.jpg",
     tags: ["Planificación Urbana", "Participación Ciudadana"],
   },
@@ -46,21 +46,21 @@ function AccordionItem({ project }: { project: (typeof projects)[0] }) {
     <div className="border-b border-[var(--cream-300)]">
       <button
         onClick={() => setOpen(!open)}
-        className="w-full group flex items-start justify-between py-8 md:py-10 text-left hover:bg-[var(--cream-100)] md:-mx-10 px-6 md:px-10 transition-colors duration-200"
         aria-expanded={open}
+        className="w-full group flex items-start justify-between py-8 md:py-10 text-left hover:bg-[var(--cream-100)] md:-mx-10 px-6 md:px-10 transition-colors duration-200"
       >
         <div className="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-8">
-          <span className="text-xs tracking-[0.15em] text-[var(--ink-faint)] font-light">
+          <span className="text-xs tracking-[0.15em] text-[var(--ink-faint)] font-light transition-colors duration-200 group-hover:text-[var(--ink)]">
             {project.year}
           </span>
 
           <div>
-            <p className="text-xs tracking-[0.1em] uppercase text-[var(--ink-faint)] font-light mb-1">
+            <p className="text-xs tracking-[0.1em] uppercase text-[var(--ink-faint)] font-light mb-1 transition-colors duration-200 group-hover:text-[var(--ink)]">
               {project.client}
             </p>
 
             <h3
-              className="text-2xl md:text-3xl tracking-[-0.02em] text-[var(--ink)]"
+              className="text-2xl md:text-3xl tracking-[-0.02em] text-[var(--ink)] transition-colors duration-200 group-hover:text-[var(--ink-muted)]"
               style={{ fontFamily: "var(--font-display)" }}
             >
               {project.title}
@@ -68,7 +68,7 @@ function AccordionItem({ project }: { project: (typeof projects)[0] }) {
           </div>
         </div>
 
-        <span className="mt-1 ml-4 shrink-0 text-[var(--ink-faint)] transition-transform duration-300">
+        <span className="mt-1 ml-4 shrink-0 text-[var(--ink-faint)] transition-colors duration-200 group-hover:text-[var(--ink)]">
           <svg
             width="20"
             height="20"
@@ -108,7 +108,6 @@ function AccordionItem({ project }: { project: (typeof projects)[0] }) {
             </div>
           )}
 
-          {/* Bloque de Tags */}
           <div className="flex flex-wrap gap-2 mb-6">
             {project.tags.map((tag) => (
               <span
@@ -120,7 +119,6 @@ function AccordionItem({ project }: { project: (typeof projects)[0] }) {
             ))}
           </div>
 
-          {/* Link alineado a la derecha debajo de todo */}
           {project.link && (
             <div className="flex justify-end">
               <a
