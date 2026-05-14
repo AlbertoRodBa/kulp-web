@@ -2,14 +2,27 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import AnnouncementBar from "./AnnouncementBar";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showAnnouncement, setShowAnnouncement] = useState(true);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 20;
+
+      setScrolled(isScrolled);
+
+      // Mostrar solo cuando esté arriba del todo
+      setShowAnnouncement(window.scrollY <= 5);
+    };
+
+    handleScroll();
+
     window.addEventListener("scroll", handleScroll);
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -21,6 +34,18 @@ export default function Header() {
           : "bg-[rgb(250,250,247)]"
       }`}
     >
+      {/* Announcement Bar */}
+      <div
+        className={`overflow-hidden transition-all duration-300 ${
+          showAnnouncement
+            ? "max-h-12 opacity-100"
+            : "max-h-0 opacity-0"
+        }`}
+      >
+        <AnnouncementBar />
+      </div>
+
+      {/* Header principal */}
       <div className="max-w-6xl mx-auto px-6 md:px-10">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -94,6 +119,7 @@ export default function Header() {
                 {item}
               </a>
             ))}
+
             <a
               href="#contacto"
               onClick={() => setMobileMenuOpen(false)}
