@@ -70,8 +70,8 @@ function AccordionItem({ project }: { project: (typeof projects)[0] }) {
 
         <span className="mt-1 ml-4 shrink-0 text-[var(--ink-faint)] transition-colors duration-200 group-hover:text-[var(--ink)]">
           <svg
-            width="20"
-            height="20"
+            width="23"
+            height="23"
             viewBox="0 0 20 20"
             fill="none"
             className={`transition-transform duration-300 ${
