@@ -17,7 +17,7 @@ export default function AnnouncementBar() {
       ))}
       <span className="text-white/30">•</span>
       <a href="#contacto" className="font-medium underline underline-offset-4 hover:opacity-75 transition-opacity">
-        Contáctame →
+        Cotiza aquí →
       </a>
     </div>
   );
