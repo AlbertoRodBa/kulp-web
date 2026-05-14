@@ -10,9 +10,9 @@ import {
 
 const services = [
   {
-    title: "Sitios Web para Proyectos",
+    title: "Sitios web para proyectos o marcas",
     description:
-      "Sitios web para entidades públicas o marcas con enfoque en accesibilidad, transparencia y facilidad de uso.",
+      "Sitios web para proyectos, entidades públicas o marcas con enfoque en accesibilidad, transparencia y facilidad de uso.",
     tag: "Autoadministrable",
     icon: faDesktop,
   },
