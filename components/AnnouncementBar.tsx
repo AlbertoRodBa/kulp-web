@@ -31,7 +31,7 @@ export default function AnnouncementBar() {
   );
 
   return (
-    <div className="bg-[#0a0a0a] text-white py-[11px] overflow-hidden w-full">
+    <div className="bg-[#292929] text-white py-[11px] overflow-hidden w-full">
       <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
         {[...Array(4)].map((_, i) => (
           <div key={i}>{chunk}</div>
