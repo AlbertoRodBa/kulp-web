@@ -31,7 +31,7 @@ const config: Config = {
         widest: "0.2em",
       },
       animation: {
-        marquee: "marquee 22s linear infinite",
+        marquee: "marquee 30s linear infinite",
       },
       keyframes: {
         marquee: {
