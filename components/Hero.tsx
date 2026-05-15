@@ -25,7 +25,7 @@ export default function Hero() {
   return (
     <section className="min-h-screen flex flex-col bg-[var(--cream-100)]">
       <div className="max-w-6xl mx-auto px-6 md:px-10 w-full flex-grow flex flex-col justify-center pt-24 pb-12 xl:pt-8 xl:pb-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-24 items-center w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-24 items-center w-full">
 
           <div className="order-2 lg:order-1 opacity-0 animate-fade-in">
             <div className="group transition-all duration-500 hover:-translate-y-1">
