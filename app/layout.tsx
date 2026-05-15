@@ -3,21 +3,27 @@ import { GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://kulp.cl"),
+
   title: "Kulp | Diseño web para proyectos con propósito",
+
   description:
     "Páginas web para instituciones públicas y privadas. Sitios institucionales, consultoría técnica y branding digital.",
+
   icons: {
     icon: "/icon-192x192.png",
   },
+
   openGraph: {
     siteName: "Kulp",
     title: "Kulp | Diseño web para proyectos con propósito",
     description:
       "Páginas web para instituciones públicas y privadas. Sitios institucionales, consultoría técnica y branding digital.",
-    url: "https://www.kulp.cl",
+    url: "https://kulp.cl",
     locale: "es_CL",
     type: "website",
   },
+
   keywords: [
     "diseño web institucional Chile",
     "desarrollo web municipalidades",
@@ -32,6 +38,10 @@ export const metadata: Metadata = {
     "accesibilidad web",
     "diseño web responsive",
   ],
+
+  verification: {
+    google: "Lof2fqS9ewJbzhACN0PAiNiAYm0dE3Hmp5bbCcLrg24",
+  },
 };
 
 export default function RootLayout({
