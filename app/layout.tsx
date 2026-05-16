@@ -5,7 +5,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://kulp.cl"),
 
-  title: "Kulp | Diseño web para proyectos con propósito",
+  title: "Kulp | Diseño Web para proyectos con propósito",
 
   description:
     "Páginas web para instituciones públicas y privadas. Sitios institucionales, consultoría técnica y branding digital.",
