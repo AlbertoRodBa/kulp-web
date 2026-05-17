@@ -6,29 +6,30 @@ import {
   faDesktop,
   faUserCog,
   faPalette,
+  faPenToSquare
 } from "@fortawesome/free-solid-svg-icons";
 
 const services = [
   {
     title: "Sitios web para proyectos o marcas",
     description:
-      "Sitios web para proyectos, entidades públicas o marcas con enfoque en accesibilidad, transparencia y facilidad de uso.",
+      "Sitios web modernos, optimizados y adaptados a dispositivos móviles, diseñados para comunicar tu proyecto de forma clara y profesional.",
     tag: "Autoadministrable",
     icon: faDesktop,
   },
   {
-    title: "Soporte y actualización",
+    title: "Rediseño web",
     description:
-      "Mantenimiento, ajustes y apoyo técnico para mantener tu sitio actualizado, funcionando correctamente y con contenidos al día.",
+      "Mejora de sitios web existentes mediante actualización visual, optimización de estructura y experiencia de navegación.",
     tag: null,
     icon: faUserCog,
   },
   {
-    title: "Branding Digital",
+    title: "Actualización de contenidos",
     description:
-      "Definición de estilo visual y coherencia digital para tu proyecto: colores, tipografías, mensajes y presencia online.",
+      "Actualización de textos, imágenes, documentos e información relevante para mantener el sitio vigente y organizado.",
     tag: null,
-    icon: faPalette,
+    icon: faPenToSquare,
   },
 ];
 

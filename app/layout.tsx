@@ -14,15 +14,32 @@ export const metadata: Metadata = {
     icon: "/icon-192x192.png",
   },
 
-  openGraph: {
-    siteName: "Kulp",
-    title: "Kulp | Diseño web para proyectos con propósito",
-    description:
-      "Páginas web para instituciones públicas y privadas. Sitios institucionales, consultoría técnica y branding digital.",
-    url: "https://kulp.cl",
-    locale: "es_CL",
-    type: "website",
-  },
+openGraph: {
+  siteName: "Kulp",
+  title: "Kulp | Diseño web para proyectos con propósito",
+  description:
+    "Páginas web para instituciones públicas y privadas. Sitios institucionales, consultoría técnica y branding digital.",
+  url: "https://kulp.cl",
+  locale: "es_CL",
+  type: "website",
+
+  images: [
+    {
+      url: "/card-share.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Kulp Diseño Web",
+    },
+  ],
+},
+
+twitter: {
+  card: "summary_large_image",
+  title: "Kulp | Diseño web para proyectos con propósito",
+  description:
+    "Páginas web para instituciones públicas y privadas. Sitios institucionales, consultoría técnica y branding digital.",
+  images: ["/card-share.jpg"],
+},
 
 keywords: [
   "diseño web chile",

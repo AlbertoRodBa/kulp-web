@@ -144,7 +144,6 @@ export default function Contact() {
                 <option value="web">Sitio web</option>
                 <option value="redesign">Rediseño web</option>
                 <option value="content">Actualización de contenidos</option>
-                <option value="branding">Branding (Identidad visual)</option>
                 <option value="otro">Otro</option>
               </select>
             </div>
