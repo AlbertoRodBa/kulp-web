@@ -6,6 +6,7 @@ import {
   faDesktop,
   faUserCog,
   faPalette,
+  faArrowsRotate,
   faPenToSquare
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -22,7 +23,7 @@ const services = [
     description:
       "Mejora de sitios web existentes mediante actualización visual, optimización de estructura y experiencia de navegación.",
     tag: null,
-    icon: faUserCog,
+    icon: faArrowsRotate,
   },
   {
     title: "Actualización de contenidos",
