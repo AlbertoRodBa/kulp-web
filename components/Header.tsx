@@ -37,9 +37,7 @@ export default function Header() {
       {/* Announcement Bar */}
       <div
         className={`overflow-hidden transition-all duration-300 ${
-          showAnnouncement
-            ? "max-h-12 opacity-100"
-            : "max-h-0 opacity-0"
+          showAnnouncement ? "max-h-12 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <AnnouncementBar />
@@ -59,10 +57,10 @@ export default function Header() {
 
           {/* Nav */}
           <nav className="hidden md:flex items-center gap-8">
-            {["Servicios", "Proyectos", "Contacto"].map((item) => (
+            {["Inicio", "Servicios", "Proyectos", "Contacto"].map((item) => (
               <a
                 key={item}
-                href={`#${item.toLowerCase()}`}
+                href={item === "Inicio" ? "#" : `#${item.toLowerCase()}`}
                 className="nav-link text-sm font-normal tracking-wide text-[var(--ink)] hover:text-[var(--ink-muted)] transition-colors duration-200"
               >
                 {item}
