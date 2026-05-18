@@ -93,7 +93,7 @@ function AccordionItem({ project }: { project: (typeof projects)[0] }) {
         className={`accordion-content ${open ? "open" : ""}`}
         aria-hidden={!open}
       >
-        <div className="pb-8 pl-0 md:pl-[calc(3rem+2rem)] pr-6 md:pr-10 md:-mx-10 px-6 md:px-10">
+        <div className="pb-8 pl-7 pr-6 md:pl-[4.5rem] md:pr-32 lg:pr-48">
           <p className="text-base font-light text-[var(--ink-muted)] leading-relaxed max-w-2xl mb-6">
             {project.description}
           </p>
