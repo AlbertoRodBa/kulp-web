@@ -22,14 +22,14 @@ const services = [
     title: "Rediseño web",
     description:
       "Mejora de sitios web existentes mediante actualización visual, optimización de estructura y experiencia de navegación.",
-    tag: null,
+    tag: "Diseño UI/UX",
     icon: faArrowsRotate,
   },
   {
     title: "Actualización de contenidos",
     description:
       "Actualización de textos, imágenes, documentos e información relevante para mantener el sitio vigente y organizado.",
-    tag: null,
+    tag: "Redacción web",
     icon: faPenToSquare,
   },
 ];
