@@ -15,7 +15,7 @@ export default function Hero() {
           observer.disconnect();
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
 
     if (imgRef.current) observer.observe(imgRef.current);
@@ -26,7 +26,6 @@ export default function Hero() {
     <section className="min-h-screen flex flex-col bg-[var(--cream-100)]">
       <div className="max-w-6xl mx-auto px-6 md:px-10 w-full flex-grow flex flex-col justify-center pt-24 pb-12 xl:pt-8 xl:pb-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-24 items-center w-full">
-
           <div className="order-2 lg:order-1 opacity-0 animate-fade-in">
             <div className="group transition-all duration-500 hover:-translate-y-1">
               <h1
@@ -35,13 +34,14 @@ export default function Hero() {
               >
                 Sitios web claros
                 <br />
-                <span className="italic font-normal text-[var(--ink-muted)] transition-colors duration-500 group-hover:text-[var(--ink)]">
+                <span className="italic font-normal text-[var(--ink-muted)] font-serif">
                   para proyectos con propósito.
                 </span>
               </h1>
 
               <h2 className="text-lg md:text-xl font-light text-[var(--ink-muted)] max-w-lg leading-relaxed mb-12 transition-all duration-500 group-hover:text-[var(--ink)] group-hover:translate-x-1">
-                Diseño, desarrollo y contenido estratégico para potenciar tu proyecto o marca.
+                Diseño, desarrollo y contenido estratégico para potenciar tu
+                proyecto o marca.
               </h2>
             </div>
 
@@ -97,7 +97,6 @@ export default function Hero() {
               />
             </div>
           </div>
-
         </div>
       </div>
 
