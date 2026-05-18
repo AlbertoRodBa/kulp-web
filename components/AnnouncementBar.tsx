@@ -23,9 +23,9 @@ export default function AnnouncementBar() {
 
       <a
         href="#contacto"
-        className="font-medium underline underline-offset-4 hover:opacity-75 transition-opacity"
+        className="font-medium underline underline-offset-4 hover:underline hover:opacity-75 transition-opacity"
       >
-        → Contacto 
+        <i>Contacto</i> 
       </a>
     </div>
   );
