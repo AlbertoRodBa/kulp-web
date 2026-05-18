@@ -14,12 +14,12 @@ export default function AnnouncementBar() {
           <span>{item}</span>
 
           {i < items.length - 1 && (
-            <span className="text-white/30">•</span>
+            <span className="text-gray-500">•</span>
           )}
         </React.Fragment>
       ))}
 
-      <span className="text-white/30">•</span>
+      <span className="text-gray-500">•</span>
 
       <a
         href="#contacto"
