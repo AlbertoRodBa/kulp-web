@@ -8,7 +8,7 @@ export default function AnnouncementBar() {
   ];
 
   const chunk = (
-    <div className="flex items-center gap-5 px-8 text-sm whitespace-nowrap">
+    <div className="flex items-center gap-5 px-8 text-[14px] font-light tracking-wide whitespace-nowrap">
       {items.map((item, i) => (
         <React.Fragment key={i}>
           <span>{item}</span>

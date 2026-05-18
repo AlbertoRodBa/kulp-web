@@ -15,7 +15,7 @@ const services = [
     title: "Sitios web para proyectos o marcas",
     description:
       "Sitios web modernos, optimizados y adaptados a dispositivos móviles, diseñados para comunicar tu proyecto de forma clara y profesional.",
-    tag: "Autoadministrable",
+    tag: "Presencia digital",
     icon: faDesktop,
   },
   {
