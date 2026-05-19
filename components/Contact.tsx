@@ -25,7 +25,7 @@ export default function Contact() {
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
         formRef.current,
-        EMAILJS_PUBLIC_KEY
+        EMAILJS_PUBLIC_KEY,
       );
 
       setStatus("success");
@@ -69,7 +69,8 @@ export default function Contact() {
             </h3>
 
             <p className="text-base font-light text-[var(--ink-muted)] leading-relaxed mb-10">
-              Cuéntame sobre tu proyecto y veamos cómo comunicarlo de forma clara y profesional.
+              Cuéntame sobre tu proyecto y veamos cómo comunicarlo de forma
+              clara y profesional.
             </p>
 
             <div className="flex items-center gap-3 group">
@@ -99,21 +100,20 @@ export default function Contact() {
             className="flex flex-col gap-5"
           >
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              {/* Proyecto / Marca */}
+              {/* Nombre */}
               <div className="flex flex-col gap-1.5">
                 <label className="text-xs uppercase tracking-[0.08em] text-[var(--ink-muted)]">
-                  Proyecto / Marca <span className="ml-1 opacity-50">*</span>
+                  Nombre <span className="ml-1 opacity-50">*</span>
                 </label>
 
                 <input
-                  name="user_company"
+                  name="user_name"
                   type="text"
                   required
-                  placeholder="Nombre de tu proyecto o marca"
+                  placeholder="Tu nombre"
                   className="bg-transparent border-b border-[var(--cream-300)] py-3 text-sm text-[var(--ink)] focus:border-[var(--ink)] outline-none"
                 />
               </div>
-
               {/* Email */}
               <div className="flex flex-col gap-1.5">
                 <label className="text-xs uppercase tracking-[0.08em] text-[var(--ink-muted)]">
@@ -129,24 +129,40 @@ export default function Contact() {
                 />
               </div>
             </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              {/* Proyecto / Marca */}
+              <div className="flex flex-col gap-1.5">
+                <label className="text-xs uppercase tracking-[0.08em] text-[var(--ink-muted)]">
+                  Proyecto / Marca <span className="ml-1 opacity-50">*</span>
+                </label>
+
+                <input
+                  name="user_company"
+                  type="text"
+                  required
+                  placeholder="Nombre de tu proyecto o marca"
+                  className="bg-transparent border-b border-[var(--cream-300)] py-3 text-sm text-[var(--ink)] focus:border-[var(--ink)] outline-none"
+                />
+              </div>
+              <div className="flex flex-col gap-1.5">
+                <label className="text-xs uppercase tracking-[0.08em] text-[var(--ink-muted)]">
+                  ¿Qué necesitas?
+                </label>
+
+                <select
+                  name="project_type"
+                  className="bg-transparent border-b border-[var(--cream-300)] py-3 text-sm text-[var(--ink)] font-light focus:border-[var(--ink)] outline-none"
+                >
+                  <option value="">Selecciona una opción</option>
+                  <option value="Web">Sitio web</option>
+                  <option value="Rediseño">Rediseño web</option>
+                  <option value="Actualización Contenidos">Actualización de contenidos</option>
+                  <option value="otro">Otro</option>
+                </select>
+              </div>
+            </div>
 
             {/* Select */}
-            <div className="flex flex-col gap-1.5">
-              <label className="text-xs uppercase tracking-[0.08em] text-[var(--ink-muted)]">
-                ¿Qué necesitas?
-              </label>
-
-              <select
-                name="project_type"
-                className="bg-transparent border-b border-[var(--cream-300)] py-3 text-sm text-[var(--ink)] font-light focus:border-[var(--ink)] outline-none"
-              >
-                <option value="">Selecciona una opción</option>
-                <option value="web">Sitio web</option>
-                <option value="redesign">Rediseño web</option>
-                <option value="content">Actualización de contenidos</option>
-                <option value="otro">Otro</option>
-              </select>
-            </div>
 
             {/* Mensaje */}
             <div className="flex flex-col gap-1.5">
