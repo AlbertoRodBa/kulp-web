@@ -23,7 +23,7 @@ export default function AnnouncementBar() {
 
       <a
         href="#contacto"
-        className="font-medium underline underline-offset-4 hover:underline hover:opacity-75 transition-opacity"
+        className="font-medium hover:underline hover:opacity-75 transition-opacity"
       >
         <i>Contacto</i> 
       </a>
@@ -31,7 +31,7 @@ export default function AnnouncementBar() {
   );
 
   return (
-    <div className="bg-[#dfd9cb] text-black py-[11px] overflow-hidden w-full">
+    <div className="bg-[#353434] text-white py-[11px] overflow-hidden w-full">
       <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
         {[...Array(4)].map((_, i) => (
           <div key={i}>{chunk}</div>
