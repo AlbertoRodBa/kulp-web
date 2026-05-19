@@ -137,10 +137,10 @@ function AccordionItem({ project }: { project: (typeof projects)[0] }) {
   );
 }
 
-export default function Projects() {
+export default function Portafolio() {
   return (
     <section
-      id="proyectos"
+      id="portafolio"
       className="bg-[var(--cream-100)] pt-16 pb-6 md:pt-20 md:pb-[6.25rem]"
     >
       <motion.div
@@ -155,7 +155,7 @@ export default function Projects() {
             className="text-3xl md:text-4xl tracking-[-0.03em] text-[var(--ink)]"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            Proyectos
+            Portafolio
           </h2>
 
           <p className="hidden md:block text-sm font-light text-[var(--ink-faint)]">

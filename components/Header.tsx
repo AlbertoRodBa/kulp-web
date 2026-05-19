@@ -9,6 +9,13 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showAnnouncement, setShowAnnouncement] = useState(true);
 
+  const navItems = [
+    "Inicio",
+    "Servicios",
+    "Portafolio",
+    "Contacto",
+  ];
+
   useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 20;
@@ -57,7 +64,7 @@ export default function Header() {
 
           {/* Nav */}
           <nav className="hidden md:flex items-center gap-8">
-            {["Inicio", "Servicios", "Proyectos", "Contacto"].map((item) => (
+            {navItems.map((item) => (
               <a
                 key={item}
                 href={item === "Inicio" ? "#" : `#${item.toLowerCase()}`}
@@ -80,7 +87,11 @@ export default function Header() {
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="md:hidden p-2 text-[var(--ink-muted)]"
-            aria-label="Menú"
+            aria-label={
+              mobileMenuOpen ? "Cerrar menú" : "Abrir menú"
+            }
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-menu"
           >
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
               {mobileMenuOpen ? (
@@ -105,12 +116,15 @@ export default function Header() {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[var(--cream-100)] border-t border-[var(--cream-300)]">
+        <div
+          id="mobile-menu"
+          className="md:hidden bg-[var(--cream-100)] border-t border-[var(--cream-300)]"
+        >
           <div className="px-6 py-4 space-y-4">
-            {["Servicios", "Proyectos", "Contacto"].map((item) => (
+            {navItems.map((item) => (
               <a
                 key={item}
-                href={`#${item.toLowerCase()}`}
+                href={item === "Inicio" ? "#" : `#${item.toLowerCase()}`}
                 onClick={() => setMobileMenuOpen(false)}
                 className="block text-sm font-light tracking-wide text-[var(--ink-muted)] hover:text-[var(--ink)] transition-colors duration-200"
               >
