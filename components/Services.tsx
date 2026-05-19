@@ -28,7 +28,7 @@ const services = [
   {
     title: "Actualización de contenidos",
     description:
-      "Actualización de textos, imágenes, documentos e información relevante para mantener el sitio vigente y organizado.",
+      "Actualización y revisión de textos, imágenes, documentos e información relevante para mantener el sitio vigente y organizado.",
     tag: "Redacción web",
     icon: faPenToSquare,
   },
