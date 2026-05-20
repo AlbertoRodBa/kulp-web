@@ -5,7 +5,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://kulp.cl"),
 
-  title: "Kulp | Diseño Web para proyectos con propósito",
+  title: "Kulp | Diseño Web para proyectos y marcas con propósito",
 
   description:
     "Páginas web para instituciones públicas y privadas. Sitios institucionales, consultoría técnica y branding digital.",
@@ -16,9 +16,9 @@ export const metadata: Metadata = {
 
 openGraph: {
   siteName: "Kulp",
-  title: "Kulp | Diseño web para proyectos con propósito",
+  title: "Kulp | Diseño web para proyectos y marcas con propósito",
   description:
-    "Páginas web para instituciones públicas y privadas. Sitios institucionales, consultoría técnica y branding digital.",
+    "Páginas web para instituciones, organizaciones y proyectos. Sitios institucionales, consultoría digital y comunicación web.",
   url: "https://kulp.cl",
   locale: "es_CL",
   type: "website",
