@@ -29,15 +29,15 @@ export default function Hero() {
           <div className="order-2 lg:order-1 opacity-0 animate-fade-in">
             <div className="group transition-all duration-500 hover:-translate-y-1">
               <h1
-  className="text-3xl md:text-4xl lg:text-5xl leading-tight tracking-[-0.03em] text-[var(--ink)] mb-4 max-w-2xl transition-all duration-500 group-hover:scale-[1.01]"
-  style={{ fontFamily: "var(--font-display)" }}
->
-  Sitios web modernos
-  <br />
-  <span className="italic font-normal text-[var(--ink-muted)] font-serif">
-    para proyectos y marcas.
-  </span>
-</h1>
+                className="text-4xl md:text-5xl lg:text-6xl leading-tight tracking-[-0.03em] text-[var(--ink)] mb-4 max-w-2xl transition-all duration-500 group-hover:scale-[1.01]"
+                style={{ fontFamily: "var(--font-display)" }}
+              >
+                Sitios web claros
+                <br />
+                <span className="italic font-normal text-[var(--ink-muted)] font-serif">
+                  para proyectos y marcas.
+                </span>
+              </h1>
 
               <h2 className="text-lg md:text-xl font-light text-[var(--ink-muted)] max-w-lg leading-relaxed mb-12 transition-all duration-500 group-hover:text-[var(--ink)] group-hover:translate-x-1">
                 Diseño, desarrollo y contenido estratégico para potenciar tu
