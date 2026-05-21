@@ -7,28 +7,28 @@ import {
   faUserCog,
   faPalette,
   faArrowsRotate,
-  faPenToSquare
+  faPenToSquare,
 } from "@fortawesome/free-solid-svg-icons";
 
 const services = [
   {
     title: "Sitios web para proyectos o marcas",
     description:
-      "Sitios web modernos, optimizados y adaptados a dispositivos móviles, diseñados para comunicar tu proyecto de forma clara y profesional.",
+      "Sitios web modernos, optimizados y adaptados a dispositivos móviles, diseñados para presentar tu proyecto o marca de forma clara, profesional y alineada con tus objetivos.",
     tag: "Presencia digital",
     icon: faDesktop,
   },
   {
     title: "Rediseño web",
     description:
-      "Mejora de sitios web existentes mediante actualización visual, optimización de estructura y experiencia de navegación.",
-    tag: "Diseño UI/UX",
+      "Actualización de sitios web existentes con mejoras en diseño visual, paleta de colores, estructura, coherencia visual y experiencia de navegación para un sitio más moderno, ordenado y fácil de usar.",
+    tag: "Diseño UX/UI",
     icon: faArrowsRotate,
   },
   {
     title: "Actualización de contenidos",
     description:
-      "Actualización y revisión de textos, imágenes, documentos e información relevante para mantener el sitio vigente y organizado.",
+      "Revisión y actualización de textos, imágenes, publicaciones, documentos e información relevante para mantener el sitio vigente, organizado y bien presentado.",
     tag: "Redacción web",
     icon: faPenToSquare,
   },
