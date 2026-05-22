@@ -32,10 +32,10 @@ export default function Hero() {
   className="text-4xl md:text-5xl lg:text-5xl leading-tight tracking-[-0.03em] text-[var(--ink)] mb-4 max-w-2xl transition-all duration-500 group-hover:scale-[1.01]"
   style={{ fontFamily: "var(--font-display)" }}
 >
-  Diseño web para
+  Diseño web
   <br />
   <span className="italic font-normal text-[var(--ink-muted)] font-serif">
-    proyectos y marcas.
+    para proyectos y marcas con propósito.
   </span>
 </h1>
 
