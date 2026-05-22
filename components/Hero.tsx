@@ -35,7 +35,7 @@ export default function Hero() {
   Diseño web
   <br />
   <span className="italic font-normal text-[var(--ink-muted)] font-serif">
-    para proyectos y marcas con propósito.
+    para proyectos con propósito.
   </span>
 </h1>
 
