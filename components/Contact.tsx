@@ -66,7 +66,7 @@ export default function Contact() {
               className="text-2xl md:text-3xl tracking-[-0.02em] text-[var(--ink)] mb-6 leading-snug"
               style={{ fontFamily: "var(--font-display)" }}
             >
-              ¿Tienes un proyecto que requiera un sitio web o rediseño?
+              ¿Tienes un proyecto o marcaque requiera un sitio web o rediseño?
             </h3>
 
             <p className="text-base font-light text-[var(--ink-muted)] leading-relaxed mb-10">
