@@ -2,7 +2,7 @@ import React from "react";
 
 export default function AnnouncementBar() {
   const items = [
-    "Sitios web optimizados",
+    "Sitios web modernos y optimizados",
     "Entrega en una semana",
     "Respuesta en menos de 24 horas",
   ];
