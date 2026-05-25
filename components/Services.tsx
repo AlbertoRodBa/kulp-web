@@ -14,8 +14,8 @@ const services = [
   {
     title: "Sitios web para proyectos o marcas",
     description:
-      "Sitios web modernos, optimizados y adaptados a dispositivos móviles, diseñados para presentar tu proyecto o marca de forma clara, profesional y alineada con tus objetivos.",
-    tag: "Presencia digital",
+      "Sitios web modernos, optimizados y adaptados a dispositivos móviles, diseñados para presentar tu proyecto o marca de forma clara y profesional. Desarrollo en WordPress o Next.js según las necesidades del proyecto.",
+    tag: "WordPress / Next.js",
     icon: faDesktop,
   },
   {
