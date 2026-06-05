@@ -95,7 +95,7 @@ export default function Contact() {
                 href="mailto:hola@kulp.cl"
                 className="text-sm font-light text-[var(--ink-muted)] hover:text-[var(--ink)] transition-colors"
               >
-                hola@kulp.cl
+                Completa el formulario o escribe directo a hola@kulp.cl
               </a>
             </div>
           </div>
