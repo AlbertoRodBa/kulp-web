@@ -10,7 +10,7 @@ export default function AnnouncementBar() {
   const chunk = (
     <div className="flex items-center gap-5 px-8 text-[14px] font-light tracking-wide whitespace-nowrap">
       <span className="flex items-center gap-2">
-        <span>🚀</span>
+        <span>💫</span>
         <span>{items[0]}</span>
       </span>
 
