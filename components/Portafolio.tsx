@@ -27,61 +27,64 @@ function ProjectCard({ project, isMobile }: { project: Project; isMobile: boolea
         href={project.link}
         target="_blank"
         rel="noopener noreferrer"
-        className="block h-full flex flex-col"
+        className="overflow-hidden flex-shrink-0 block"
       >
-        <div className="overflow-hidden flex-shrink-0">
-          <img
-            src={project.image}
-            alt={project.title}
-            className="w-full aspect-[16/10] object-cover transition-transform duration-700 group-hover:scale-105"
-          />
-        </div>
+        <img
+          src={project.image}
+          alt={project.title}
+          className="w-full aspect-[16/10] object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+      </a>
 
-        <div className="p-6 flex flex-col flex-grow">
-          <div className="flex items-center justify-between mb-3">
-            <span className="text-xs uppercase tracking-[0.12em] text-[var(--ink-faint)]">
-              {project.client}
-            </span>
-            <span className="text-xs text-[var(--ink-faint)]">
-              {project.year}
-            </span>
-          </div>
-
-          <h3
-            className="text-xl md:text-2xl text-[var(--ink)] mb-3 tracking-[-0.02em] line-clamp-2"
-            style={{ fontFamily: "var(--font-display)" }}
-          >
-            {project.title}
-          </h3>
-
-          <p
-            className="text-sm text-[var(--ink-muted)] leading-relaxed mb-5 flex-grow"
-            style={{
-              display: "-webkit-box",
-              WebkitLineClamp: isMobile ? 4 : 6,
-              WebkitBoxOrient: "vertical",
-              overflow: "hidden",
-            }}
-          >
-            {project.description}
-          </p>
-
-          <div className="flex flex-wrap gap-2 mb-5">
-            {project.tags.map((tag) => (
-              <span
-                key={tag}
-                className="text-xs tracking-[0.08em] font-light text-[var(--ink-faint)] border border-[var(--cream-300)] px-2.5 py-1 rounded-full"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-
-          <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.15em] font-medium text-[var(--ink-faint)] group-hover:text-[var(--ink)] transition-colors mt-auto">
-            Ver proyecto →
+      <div className="p-6 flex flex-col flex-grow">
+        <div className="flex items-center justify-between mb-3">
+          <span className="text-xs uppercase tracking-[0.12em] text-[var(--ink-faint)]">
+            {project.client}
+          </span>
+          <span className="text-xs text-[var(--ink-faint)]">
+            {project.year}
           </span>
         </div>
-      </a>
+
+        <h3
+          className="text-xl md:text-2xl text-[var(--ink)] mb-3 tracking-[-0.02em] line-clamp-2"
+          style={{ fontFamily: "var(--font-display)" }}
+        >
+          {project.title}
+        </h3>
+
+        <p
+          className="text-sm text-[var(--ink-muted)] leading-relaxed mb-5 flex-grow"
+          style={{
+            display: "-webkit-box",
+            WebkitLineClamp: isMobile ? 4 : 6,
+            WebkitBoxOrient: "vertical",
+            overflow: "hidden",
+          }}
+        >
+          {project.description}
+        </p>
+
+        <div className="flex flex-wrap gap-2 mb-5">
+          {project.tags.map((tag) => (
+            <span
+              key={tag}
+              className="text-xs tracking-[0.08em] font-light text-[var(--ink-faint)] border border-[var(--cream-300)] px-2.5 py-1 rounded-full"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.15em] font-medium text-[var(--ink-faint)] hover:text-[var(--ink)] transition-colors mt-auto"
+        >
+          Ver proyecto →
+        </a>
+      </div>
     </motion.article>
   );
 }
