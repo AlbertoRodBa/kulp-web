@@ -1,143 +1,186 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { projects } from "@/constants/projects";
+import { useCarousel } from "@/hooks/useCarousel";
 
-const projects = [
-  {
-    id: 1,
-    client: "Municipalidad de Cerrillos",
-    title: "PLADECO Cerrillos",
-    year: "2026",
-    link: "https://pladecocerrillos.participayplanifica.cl",
-    description:
-      "Página web para la gestión del Plan de Desarrollo Comunal (PLADECO) de Cerrillos. Permitió la visualización de objetivos estratégicos, seguimiento de etapas y calendario de actividades ciudadanas, fortaleciendo la transparencia del proceso.",
-    image: "/project-1-pladeco-cerrillos.jpg",
-    tags: ["Participación Ciudadana", "Desarrollo Local"],
-  },
-  {
-    id: 2,
-    client: "Municipalidad de Quintero",
-    title: "Plan Regulador Comunal de Quintero",
-    year: "2025",
-    link: "https://prcquintero.participayplanifica.cl",
-    description:
-      "Sitio institucional para la difusión del Plan Regulador Comunal. La plataforma permite a los vecinos acceder a la normativa urbana, cartografía interactiva y noticias del proceso de actualización del PRC.",
-    image: "/project-2-prc-quintero.jpg",
-    tags: ["Planificación Urbana", "Participación Ciudadana"],
-  },
-  {
-    id: 3,
-    client: "Municipalidad de Peñaflor",
-    title: "PIIMEP Peñaflor",
-    year: "2025",
-    link: "https://piimep.penaflor.cl",
-    description:
-      "Sitio web para informar sobre el Plan de Inversiones de Infraestructura de Movilidad y Espacio Público (PIIMEP) de la Municipalidad de Peñaflor. La página web permitió a los vecinos de la comuna informarse sobre los llamados a consultas ciudadanas y fechas de actividades participativas.",
-    image: "/project-3-piimep-penaflor.jpg",
-    tags: ["Planificación Urbana", "Participación Ciudadana"],
-  },
-];
+interface Project {
+  id: number;
+  client: string;
+  title: string;
+  year: string;
+  link: string;
+  description: string;
+  image: string;
+  tags: string[];
+}
 
-function AccordionItem({ project }: { project: (typeof projects)[0] }) {
-  const [open, setOpen] = useState(false);
-
+function ProjectCard({ project, isMobile }: { project: Project; isMobile: boolean }) {
   return (
-    <div className="border-b border-[var(--cream-300)]">
-      <button
-        onClick={() => setOpen(!open)}
-        aria-expanded={open}
-        className="w-full group flex items-start justify-between py-8 md:py-10 text-left hover:bg-[var(--cream-100)] md:-mx-10 px-6 md:px-10 transition-colors duration-200"
+    <motion.article
+      whileHover={{ y: -6 }}
+      transition={{ duration: 0.2 }}
+      className="group overflow-hidden rounded-xl border border-[var(--cream-300)] bg-white h-full flex flex-col"
+    >
+      <a
+        href={project.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block h-full flex flex-col"
       >
-        <div className="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-8">
-          <span className="text-xs tracking-[0.15em] text-[var(--ink-faint)] font-light transition-colors duration-200 group-hover:text-[var(--ink)]">
-            {project.year}
-          </span>
-
-          <div>
-            <p className="text-xs tracking-[0.1em] uppercase text-[var(--ink-faint)] font-light mb-1 transition-colors duration-200 group-hover:text-[var(--ink)]">
-              {project.client}
-            </p>
-
-            <h3
-              className="text-2xl md:text-3xl tracking-[-0.02em] text-[var(--ink)] transition-colors duration-200 group-hover:text-[var(--ink-muted)]"
-              style={{ fontFamily: "var(--font-display)" }}
-            >
-              {project.title}
-            </h3>
-          </div>
+        <div className="overflow-hidden flex-shrink-0">
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full aspect-[16/10] object-cover transition-transform duration-700 group-hover:scale-105"
+          />
         </div>
 
-        <span className="mt-1 ml-4 shrink-0 text-[var(--ink-faint)] transition-colors duration-200 group-hover:text-[var(--ink)]">
-          <svg
-            width="23"
-            height="23"
-            viewBox="0 0 20 20"
-            fill="none"
-            className={`transition-transform duration-300 ${
-              open ? "rotate-45" : ""
-            }`}
-            aria-hidden="true"
-          >
-            <path
-              d="M10 4v12M4 10h12"
-              stroke="currentColor"
-              strokeWidth="1.2"
-              strokeLinecap="round"
-            />
-          </svg>
-        </span>
-      </button>
+        <div className="p-6 flex flex-col flex-grow">
+          <div className="flex items-center justify-between mb-3">
+            <span className="text-xs uppercase tracking-[0.12em] text-[var(--ink-faint)]">
+              {project.client}
+            </span>
+            <span className="text-xs text-[var(--ink-faint)]">
+              {project.year}
+            </span>
+          </div>
 
-      <div
-        className={`accordion-content ${open ? "open" : ""}`}
-        aria-hidden={!open}
-      >
-        <div className="pb-8 pl-7 pr-6 md:pl-[4.5rem] md:pr-32 lg:pr-48">
-          <p className="text-base font-light text-[var(--ink-muted)] leading-relaxed max-w-2xl mb-6">
+          <h3
+            className="text-xl md:text-2xl text-[var(--ink)] mb-3 tracking-[-0.02em] line-clamp-2"
+            style={{ fontFamily: "var(--font-display)" }}
+          >
+            {project.title}
+          </h3>
+
+          <p
+            className="text-sm text-[var(--ink-muted)] leading-relaxed mb-5 flex-grow"
+            style={{
+              display: "-webkit-box",
+              WebkitLineClamp: isMobile ? 4 : 6,
+              WebkitBoxOrient: "vertical",
+              overflow: "hidden",
+            }}
+          >
             {project.description}
           </p>
 
-          {project.image && (
-            <div className="mb-6">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full max-w-2xl h-auto rounded-lg shadow-sm border border-[var(--cream-300)]"
-              />
-            </div>
-          )}
-
-          <div className="flex flex-wrap gap-2 mb-6">
+          <div className="flex flex-wrap gap-2 mb-5">
             {project.tags.map((tag) => (
               <span
                 key={tag}
-                className="text-xs tracking-[0.08em] font-light text-[var(--ink-faint)] border border-[var(--cream-300)] px-3 py-1"
+                className="text-xs tracking-[0.08em] font-light text-[var(--ink-faint)] border border-[var(--cream-300)] px-2.5 py-1 rounded-full"
               >
                 {tag}
               </span>
             ))}
           </div>
 
-          {project.link && (
-            <div className="flex justify-end">
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs uppercase tracking-[0.15em] font-medium text-[var(--ink-faint)] hover:text-[var(--ink)] transition-colors duration-200 underline underline-offset-4 decoration-[var(--cream-300)] hover:decoration-[var(--ink)]"
-              >
-                Visitar sitio
-              </a>
-            </div>
-          )}
+          <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.15em] font-medium text-[var(--ink-faint)] group-hover:text-[var(--ink)] transition-colors mt-auto">
+            Ver proyecto →
+          </span>
         </div>
-      </div>
-    </div>
+      </a>
+    </motion.article>
+  );
+}
+
+function NavButton({
+  direction,
+  onClick,
+  disabled,
+  variant = "desktop",
+}: {
+  direction: "prev" | "next";
+  onClick: () => void;
+  disabled: boolean;
+  variant?: "mobile" | "desktop";
+}) {
+  const isMobile = variant === "mobile";
+  const isPrev = direction === "prev";
+
+  return (
+    <button
+      onClick={onClick}
+      disabled={disabled}
+      aria-label={isPrev ? "Previous projects" : "Next projects"}
+      className={`absolute top-1/2 -translate-y-1/2 z-20 p-${isMobile ? "3" : "2"} rounded-full transition-all ${
+        disabled
+          ? isMobile
+            ? "opacity-20 cursor-not-allowed"
+            : "opacity-50 cursor-not-allowed"
+          : isMobile
+            ? "opacity-60 hover:opacity-100 bg-black/30 hover:bg-black/50"
+            : "hover:bg-[var(--cream-300)]"
+      } ${isPrev ? (isMobile ? "left-4" : "-translate-x-20 left-0") : isMobile ? "right-4" : "translate-x-20 right-0"}`}
+    >
+      <svg
+        className={isMobile ? "w-8 h-8 text-white" : "w-6 h-6 text-[var(--ink)]"}
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        strokeWidth={isMobile ? 3 : 2}
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d={isPrev ? "M15 19l-7-7 7-7" : "M9 5l7 7-7 7"}
+        />
+      </svg>
+    </button>
   );
 }
 
 export default function Portafolio() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  const itemsPerPage = isMobile ? 1 : 3;
+  const {
+    currentIndex,
+    setCurrentIndex,
+    maxIndex,
+    handleTouchStart,
+    handleTouchEnd,
+    goToPrevious,
+    goToNext,
+  } = useCarousel({ totalItems: projects.length, itemsPerPage });
+
+  // Detect mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  // Reset index when switching
+  useEffect(() => {
+    setCurrentIndex(0);
+  }, [isMobile, setCurrentIndex]);
+
+  const visibleProjects = projects.slice(
+    currentIndex,
+    currentIndex + itemsPerPage
+  );
+
+  const showNavigation = projects.length > itemsPerPage;
+  const showNavigationButtons = isMobile
+    ? projects.length > 1
+    : showNavigation;
+
+  const renderCounter = () => {
+    if (isMobile) {
+      return `${currentIndex + 1} de ${projects.length}`;
+    }
+    if (showNavigation) {
+      return `${currentIndex + 1}–${Math.min(currentIndex + itemsPerPage, projects.length)} de ${projects.length}`;
+    }
+    return "Trabajo reciente";
+  };
+
   return (
     <section
       id="portafolio"
@@ -157,17 +200,60 @@ export default function Portafolio() {
           >
             Portafolio
           </h2>
-
-          <p className="hidden md:block text-sm font-light text-[var(--ink-faint)]">
-            Trabajo reciente
+          <p className="text-sm font-light text-[var(--ink-faint)]">
+            {renderCounter()}
           </p>
         </div>
 
-        <div>
-          {projects.map((p) => (
-            <AccordionItem key={p.id} project={p} />
-          ))}
+        {/* Carousel */}
+        <div
+          className="relative"
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
+          <div
+            className={
+              isMobile
+                ? "relative"
+                : "grid md:grid-cols-2 xl:grid-cols-3 gap-8"
+            }
+          >
+            {visibleProjects.map((p) => (
+              <motion.div
+                key={p.id}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <ProjectCard project={p} isMobile={isMobile} />
+              </motion.div>
+            ))}
+          </div>
+
+          {showNavigationButtons && (
+            <>
+              <NavButton
+                direction="prev"
+                onClick={goToPrevious}
+                disabled={currentIndex === 0}
+                variant={isMobile ? "mobile" : "desktop"}
+              />
+              <NavButton
+                direction="next"
+                onClick={goToNext}
+                disabled={currentIndex === maxIndex}
+                variant={isMobile ? "mobile" : "desktop"}
+              />
+            </>
+          )}
         </div>
+
+        {isMobile && projects.length > 1 && (
+          <p className="text-center text-xs text-[var(--ink-faint)] mt-4 font-light">
+            Desliza para ver más
+          </p>
+        )}
       </motion.div>
     </section>
   );
