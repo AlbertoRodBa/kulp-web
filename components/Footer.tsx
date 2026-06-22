@@ -46,7 +46,7 @@ export default function Footer() {
           {/* Right - Copyright */}
           <div className="md:mt-6">
             <p className="text-xs font-light text-white/40">
-              © {year} Kulp | Chile
+              © {year} Kulp | Chile 🇨🇱
             </p>
           </div>
 
