@@ -70,7 +70,7 @@ export default function Contact() {
             </h3>
 
             <p className="text-base font-light text-[var(--ink-muted)] leading-relaxed mb-10">
-              Cuéntame sobre tu proyecto o marca y veamos cómo darle una presencia web clara, moderna y profesional.
+              Cuéntanos sobre tu proyecto o marca y veamos cómo darle una presencia web clara, moderna y profesional.
             </p>
 
             <div className="flex items-center gap-3 group">

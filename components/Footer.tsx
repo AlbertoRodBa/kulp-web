@@ -29,7 +29,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="#proyectos"
+              href="#portafolio"
               className="text-xs font-light text-white/60 hover:text-white transition-colors duration-300"
             >
               Proyectos

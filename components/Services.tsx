@@ -51,7 +51,7 @@ export default function Services() {
           </h2>
 
           <p className="hidden md:block text-sm text-[var(--ink-faint)]">
-            Puedo ayudarte con
+            Podemos ayudarte con
           </p>
         </div>
 
