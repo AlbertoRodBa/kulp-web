@@ -205,7 +205,7 @@ export default function Contact() {
                 name="message"
                 required
                 rows={4}
-                placeholder="Cuéntame qué necesitas o qué te gustaría mejorar"
+                placeholder="Cuéntanos qué necesitas o qué te gustaría mejorar"
                 className="bg-transparent border-b border-[var(--cream-300)] py-3 text-sm text-[var(--ink)] focus:border-[var(--ink)] outline-none resize-none"
               />
             </div>
