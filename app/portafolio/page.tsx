@@ -1,6 +1,6 @@
 const projects = [
   {
-    id: 1,
+    id: 2,
     client: "Municipalidad de Cerrillos",
     title: "PLADECO Cerrillos",
     year: "2026",
@@ -11,7 +11,7 @@ const projects = [
     tags: ["Participación Ciudadana", "Desarrollo Local"],
   },
   {
-    id: 2,
+    id: 3,
     client: "Municipalidad de Quintero",
     title: "Plan Regulador Comunal de Quintero",
     year: "2025",
@@ -22,7 +22,7 @@ const projects = [
     tags: ["Planificación Urbana", "Participación Ciudadana"],
   },
   {
-    id: 3,
+    id: 4,
     client: "Municipalidad de Peñaflor",
     title: "PIIMEP Peñaflor",
     year: "2024",
@@ -31,6 +31,18 @@ const projects = [
       "Sitio web para informar sobre el plan de inversiones de infraestructura, movilidad y espacio público.",
     image: "/project-3-piimep-penaflor.jpg",
     tags: ["Planificación Urbana", "Participación Ciudadana"],
+  },
+
+    {
+    id: 1,
+    client: "Municipalidad de Pudahuel",
+    title: "PLADECO Pudahuel",
+    year: "2024",
+    link: "https://pladecopudahuel.participayplanifica.cl",
+    description:
+      "Sitio web para informar sobre el Plan de Desarrollo Comunal de Pudahuel.",
+    image: "/project-0-pladeco-pudahuel.jpg",
+    tags: ["Participación Ciudadana", "Desarrollo Local"],
   },
 ];
 
