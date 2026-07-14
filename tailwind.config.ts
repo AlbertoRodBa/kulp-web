@@ -32,6 +32,8 @@ const config: Config = {
       },
       animation: {
         marquee: "marquee 40s linear infinite",
+        "marquee-slow": "marquee 45s linear infinite",
+        "marquee-clients": "marquee 32s linear infinite",
       },
       keyframes: {
         marquee: {

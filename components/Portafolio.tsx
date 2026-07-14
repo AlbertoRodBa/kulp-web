@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { projects } from "@/constants/projects";
 import { useCarousel } from "@/hooks/useCarousel";
+import Clients from "@/components/Clients";
 
 interface Project {
   id: number;
@@ -254,9 +255,10 @@ export default function Portafolio() {
 
         {isMobile && projects.length > 1 && (
           <p className="text-center text-xs text-[var(--ink-faint)] mt-4 font-light">
-            Desliza para ver más
+            
           </p>
         )}
+        <Clients />
       </motion.div>
     </section>
   );

@@ -87,3 +87,12 @@ input:focus, textarea:focus {
 .nav-link:hover::after {
   width: 100%;
 }
+
+/* Hide native scrollbars for horizontal client logo scroller */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
