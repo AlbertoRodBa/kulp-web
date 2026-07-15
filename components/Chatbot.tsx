@@ -107,7 +107,7 @@ export default function Chatbot() {
                 <div className="rounded-2xl border border-[var(--cream-300)] bg-white/70 p-4 text-sm leading-relaxed text-[var(--ink-muted)]">
                   <p className="text-base font-medium text-[var(--ink)]">{selectedService.title}</p>
                   <p className="mt-2">{selectedService.description}</p>
-                  <p className="mt-3 text-[var(--ink)]">{selectedService.prompt}</p>
+                  <p className="mt-3 italic text-[var(--ink)]">{selectedService.prompt}</p>
                 </div>
 
                 <Link
