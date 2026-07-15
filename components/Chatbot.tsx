@@ -21,7 +21,7 @@ const services: ServiceOption[] = [
     label: "Diseño web",
     title: "Diseño web",
     description:
-      "Creamos sitios web modernos, responsivos y diseñados para transmitir confianza, ofrecer una buena experiencia de usuario y representar la identidad de tu marca. Cada proyecto se desarrolla de acuerdo con tus objetivos y necesidades.",
+      "Creamos tu sitio web, moderno y responsive ideado para transmitir confianza, ofrecer una buena experiencia de usuario y representar la identidad de tu marca. Cada proyecto se desarrolla de acuerdo con tus objetivos y necesidades.",
     prompt:
       "¿Te interesa este servicio? Cuéntanos más sobre tu proyecto completando el formulario que encontrarás más abajo.",
     buttonLabel: "↓ Ir al formulario",
