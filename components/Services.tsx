@@ -26,7 +26,7 @@ const services = [
   {
     title: "Actualización de contenidos",
     description:
-      "Gestión y mantenimiento de contenidos mediante la revisión, edición y actualización de textos, imágenes, publicaciones y documentos, complementado con optimización SEO básica para fortalecer la presencia digital y mejorar la experiencia de navegación.",
+      "Gestión y mantenimiento de contenidos mediante la revisión, edición y actualización de textos, imágenes, publicaciones y documentos, junto con optimización SEO básica para fortalecer la presencia digital y mejorar la experiencia de usuario.",
     tag: "Gestión de contenidos / SEO",
     icon: faPenToSquare,
   },
