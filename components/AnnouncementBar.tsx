@@ -2,7 +2,7 @@ import React from "react";
 
 export default function AnnouncementBar() {
   const items = [
-    "💫 Sitios web modernos y diseñados a medida",
+    "💫 Sitios web diseñados a medida",
     "Adaptación a todos los dispositivos",
     "Respuesta en menos de 24 horas",
   ];
