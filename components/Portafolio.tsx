@@ -20,8 +20,6 @@ interface Project {
 function ProjectCard({ project, isMobile }: { project: Project; isMobile: boolean }) {
   return (
     <motion.article
-      whileHover={{ y: -6 }}
-      transition={{ duration: 0.2 }}
       className="group overflow-hidden rounded-xl border border-[var(--cream-300)] bg-white h-full flex flex-col"
     >
       <a
