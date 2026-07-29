@@ -52,7 +52,7 @@ export default function Hero() {
               >
                 <span className="absolute inset-0 bg-[#424242] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
                 <span className="relative z-10 flex items-center gap-3">
-                  Cotiza aquí
+                  Quiero cotizar
                   <svg
                     width="16"
                     height="16"
