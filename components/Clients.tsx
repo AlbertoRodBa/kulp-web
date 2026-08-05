@@ -30,7 +30,7 @@ export default function Clients() {
             className="text-3xl md:text-4xl tracking-[-0.03em] text-[var(--ink)]"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            Han confiado en nosotros
+            Nuestros clientes
           </h2>
         </div>
 
