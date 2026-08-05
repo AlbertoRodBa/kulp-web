@@ -87,7 +87,7 @@ export default function PladeturyungayPage() {
               <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-[420px] max-h-[520px] object-cover object-top transition-transform duration-[1200ms] ease-out group-hover:scale-105"
+                className="w-full h-auto max-h-[320px] sm:h-[420px] sm:max-h-[520px] object-contain sm:object-cover object-top transition-transform duration-[1200ms] ease-out group-hover:scale-105"
               />
 
               <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/0 transition duration-500 group-hover:bg-black/20">
