@@ -2,12 +2,16 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import AnnouncementBar from "./AnnouncementBar";
 
 export default function Header() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showAnnouncement, setShowAnnouncement] = useState(true);
+
+  const isRoot = pathname === "/";
 
   const navItems = [
     "Inicio",
@@ -64,20 +68,23 @@ export default function Header() {
 
           {/* Nav */}
           <nav className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
-              <a
-                key={item}
-                href={item === "Inicio" ? "#" : `#${item.toLowerCase()}`}
-                className="nav-link text-sm font-normal tracking-wide text-[var(--ink)] hover:text-[var(--ink-muted)] transition-colors duration-200"
-              >
-                {item}
-              </a>
-            ))}
+            {navItems.map((item) => {
+              const target = item === "Inicio" ? "/" : isRoot ? `#${item.toLowerCase()}` : `/#${item.toLowerCase()}`;
+              return (
+                <a
+                  key={item}
+                  href={target}
+                  className="nav-link text-sm font-normal tracking-wide text-[var(--ink)] hover:text-[var(--ink-muted)] transition-colors duration-200"
+                >
+                  {item}
+                </a>
+              );
+            })}
           </nav>
 
           {/* CTA */}
           <a
-            href="#contacto"
+            href={isRoot ? "#contacto" : "/#contacto"}
             className="hidden md:inline-flex items-center gap-2 text-sm font-light px-4 py-2 border border-[var(--ink)] text-[var(--ink)] hover:bg-[var(--ink)] hover:text-[var(--cream-50)] transition-all duration-200"
           >
             Conversar
@@ -121,19 +128,22 @@ export default function Header() {
           className="md:hidden bg-[var(--cream-100)] border-t border-[var(--cream-300)]"
         >
           <div className="px-6 py-4 space-y-4">
-            {navItems.map((item) => (
-              <a
-                key={item}
-                href={item === "Inicio" ? "#" : `#${item.toLowerCase()}`}
-                onClick={() => setMobileMenuOpen(false)}
-                className="block text-sm font-light tracking-wide text-[var(--ink-muted)] hover:text-[var(--ink)] transition-colors duration-200"
-              >
-                {item}
-              </a>
-            ))}
+            {navItems.map((item) => {
+              const target = item === "Inicio" ? "/" : isRoot ? `#${item.toLowerCase()}` : `/#${item.toLowerCase()}`;
+              return (
+                <a
+                  key={item}
+                  href={target}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block text-sm font-light tracking-wide text-[var(--ink-muted)] hover:text-[var(--ink)] transition-colors duration-200"
+                >
+                  {item}
+                </a>
+              );
+            })}
 
             <a
-              href="#contacto"
+              href={isRoot ? "#contacto" : "/#contacto"}
               onClick={() => setMobileMenuOpen(false)}
               className="inline-flex items-center gap-2 text-sm font-light px-4 py-2 border border-[var(--ink)] text-[var(--ink)] hover:bg-[var(--ink)] hover:text-[var(--cream-50)] transition-all duration-200"
             >

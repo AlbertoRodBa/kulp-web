@@ -44,4 +44,15 @@ export const projects = [
     image: "/project-0-pladeco-pudahuel.jpg",
     tags: ["Participación Ciudadana", "Desarrollo Local"],
   },
+  {
+    id: 5,
+    client: "Municipalidad de Yungay",
+    title: "PLADETUR Yungay",
+    year: "2024",
+    link: "/portafolio/pladeturyungay",
+    description:
+      "Sitio web para el PLADETUR Yungay, orientado a promover y fortalecer el turismo local mediante la participación de la comunidad.",
+    image: "/project--1-pladetur-yungay.jpg",
+    tags: ["Turismo", "Desarrollo Local"],
+  },
 ];
