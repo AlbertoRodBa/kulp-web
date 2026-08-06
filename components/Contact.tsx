@@ -215,9 +215,12 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={status === "sending"}
-                className="px-8 py-4 bg-[var(--ink)] text-[var(--cream-50)] text-sm hover:bg-[var(--ink-muted)] transition"
+                className="group relative inline-flex items-center justify-center gap-3 overflow-hidden px-8 py-4 bg-[var(--ink)] text-[var(--cream-50)] text-sm font-light tracking-wide"
               >
-                {status === "sending" ? "Enviando..." : "Enviar mensaje"}
+                <span className="absolute inset-0 bg-[#424242] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
+                <span className="relative z-10 flex items-center gap-3">
+                  {status === "sending" ? "Enviando..." : "Enviar mensaje"}
+                </span>
               </button>
 
               {status === "success" && (

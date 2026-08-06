@@ -27,9 +27,9 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto px-6 md:px-10 w-full flex-grow flex flex-col justify-center pt-24 pb-12 xl:pt-8 xl:pb-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-24 items-center w-full">
           <div className="order-2 lg:order-1 opacity-0 animate-fade-in">
-            <div className="group transition-all duration-500 hover:-translate-y-1">
+            <div className="group transition-all duration-500">
               <h1
-                className="text-4xl md:text-5xl lg:text-6xl leading-tight tracking-[-0.03em] text-[var(--ink)] mb-4 max-w-2xl transition-all duration-500 group-hover:scale-[1.01]"
+                className="text-4xl md:text-5xl lg:text-6xl leading-tight tracking-[-0.03em] text-[var(--ink)] mb-4 max-w-2xl"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 Diseño web para
@@ -39,7 +39,7 @@ export default function Hero() {
                 </span>
               </h1>
 
-              <h2 className="text-lg md:text-xl font-light text-[var(--ink-muted)] max-w-lg leading-relaxed mb-12 transition-all duration-500 group-hover:text-[var(--ink)] group-hover:translate-x-1">
+              <h2 className="text-lg md:text-xl font-light text-[var(--ink-muted)] max-w-lg leading-relaxed mb-12">
                 Diseño, desarrollo y contenido estratégico para potenciar tu
                 proyecto o marca.
               </h2>
