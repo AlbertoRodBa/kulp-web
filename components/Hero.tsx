@@ -29,19 +29,20 @@ export default function Hero() {
           <div className="order-2 lg:order-1 opacity-0 animate-fade-in">
             <div className="group transition-all duration-500">
               <h1
-                className="text-4xl md:text-5xl lg:text-6xl leading-tight tracking-[-0.03em] text-[var(--ink)] mb-4 max-w-2xl"
+                className="text-[2.7rem] sm:text-[3.1rem] md:text-[4rem] lg:text-[3.4rem] leading-[0.96] tracking-[-0.03em] text-[var(--ink)] mb-4 max-w-2xl"
                 style={{ fontFamily: "var(--font-display)" }}
               >
-                Diseño web para
+                Creamos la
                 <br />
-                <span className="italic font-normal text-[var(--ink-muted)] font-serif">
-                  impulsar tu proyecto.
+                <span className="italic font-normal text-[var(--ink)] font-serif text-[1em] sm:text-[1.03em] md:text-[1.06em] lg:text-[1em]">
+                  presencia digital
                 </span>
+                <br />
+                <span className="not-italic text-[0.9em] sm:text-[0.94em] md:text-[0.98em]">de tu proyecto</span>
               </h1>
 
               <h2 className="text-lg md:text-xl font-light text-[var(--ink-muted)] max-w-lg leading-relaxed mb-12">
-                Diseño, desarrollo y contenido estratégico para potenciar tu
-                proyecto o marca.
+                Diseño, desarrollo y contenido estratégico para impulsar tu proyecto o marca.
               </h2>
             </div>
 
