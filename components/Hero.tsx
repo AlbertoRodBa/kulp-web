@@ -38,7 +38,7 @@ export default function Hero() {
                   presencia digital
                 </span>
                 <br />
-                <span className="not-italic text-[0.9em] sm:text-[0.94em] md:text-[0.98em]">de tu proyecto</span>
+                <span className="not-italic text-[1em]">de tu proyecto</span>
               </h1>
 
               <h2 className="text-lg md:text-xl font-light text-[var(--ink-muted)] max-w-lg leading-relaxed mb-12">
