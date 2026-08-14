@@ -173,15 +173,7 @@ export default function Portafolio() {
     ? projects.length > 1
     : showNavigation;
 
-  const renderCounter = () => {
-    if (isMobile) {
-      return `${currentIndex + 1} de ${projects.length}`;
-    }
-    if (showNavigation) {
-      return `${currentIndex + 1}–${Math.min(currentIndex + itemsPerPage, projects.length)} de ${projects.length}`;
-    }
-    return "Trabajo reciente";
-  };
+  const renderCounter = () => "Conoce nuestros proyectos";
 
   return (
     <section
@@ -251,11 +243,6 @@ export default function Portafolio() {
           )}
         </div>
 
-        {isMobile && projects.length > 1 && (
-          <p className="text-center text-xs text-[var(--ink-faint)] mt-4 font-light">
-            
-          </p>
-        )}
         <Clients />
       </motion.div>
     </section>
