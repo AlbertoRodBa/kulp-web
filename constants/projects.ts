@@ -28,7 +28,7 @@ export const projects = [
     year: "2024",
     link: "https://piimep.penaflor.cl",
     description:
-      "Sitio web para informar sobre el Plan de Inversiones de Infraestructura, Movilidad y espacio público de Peñaflor. Incluye información actualizada y glosario.",
+      "Sitio web para informar sobre el Plan de Inversiones de Infraestructura, Movilidad y espacio público de Peñaflor. Cuenta con información actualizada y glosario.",
     image: "/project-3-piimep-penaflor.jpg",
     tags: ["Planificación Urbana", "Participación Ciudadana"],
   },
