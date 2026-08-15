@@ -11,6 +11,7 @@ type ServiceOption = {
   label: string;
   title: string;
   description: string;
+  items?: string[];
   prompt: string;
   buttonLabel: string;
 };
@@ -41,7 +42,12 @@ const services: ServiceOption[] = [
     label: "Actualización de contenidos",
     title: "Actualización de contenidos",
     description:
-      "Mantenemos tu sitio web al día mediante la actualización de textos, imágenes, documentos, enlaces y otros contenidos, asegurando que la información de tu empresa permanezca vigente y correctamente presentada.",
+      "Mantenemos tu sitio web actualizado con cambios en textos, imágenes, documentos, enlaces y otros contenidos.\n\nServicio disponible de forma mensual.",
+    items: [
+      "Actualización de textos e imágenes",
+      "Carga y reemplazo de documentos",
+      "Corrección de enlaces e información",
+    ],
     prompt:
       "¿Necesitas este servicio? Cuéntanos qué cambios quieres realizar completando el formulario que encontrarás más abajo.",
     buttonLabel: "↓ Ir al formulario",
@@ -106,7 +112,24 @@ export default function Chatbot() {
               <div className="space-y-3">
                 <div className="rounded-2xl border border-[var(--cream-300)] bg-white/70 p-4 text-sm leading-relaxed text-[var(--ink-muted)]">
                   <p className="text-base font-medium text-[var(--ink)]">{selectedService.title}</p>
-                  <p className="mt-2">{selectedService.description}</p>
+                  <p className="mt-2">
+                    {selectedService.description.split('\n\n').map((para, idx) => (
+                      <span key={idx} className={idx > 0 ? 'italic' : ''}>
+                        {para}
+                        {idx < selectedService.description.split('\n\n').length - 1 && <br />}
+                      </span>
+                    ))}
+                  </p>
+                  {selectedService.items && (
+                    <ul className="mt-3 space-y-1">
+                      {selectedService.items.map((item, index) => (
+                        <li key={index} className="flex items-start gap-2">
+                          <span className="text-[var(--ink)] mt-0.5">•</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                   <p className="mt-3 italic text-[var(--ink)]">{selectedService.prompt}</p>
                 </div>
 
