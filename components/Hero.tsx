@@ -74,7 +74,7 @@ export default function Hero() {
 
               <a
                 href="#servicios"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 border border-[var(--cream-300)] text-[var(--ink-muted)] text-sm font-light tracking-wide hover:border-[var(--ink)] hover:text-[var(--ink)] transition-all duration-300"
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 border border-[#c5c3bc] text-[var(--ink-muted)] text-sm font-light tracking-wide hover:border-[var(--ink)] hover:text-[var(--ink)] transition-all duration-300"
               >
                 Ver servicios
               </a>

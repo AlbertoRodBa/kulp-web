@@ -14,7 +14,7 @@ export const projects = [
     id: 3,
     client: "Municipalidad de Quintero",
     title: "Plan Regulador Comunal de Quintero",
-    year: "2025",
+    year: "2025-26",
     link: "https://prcquintero.participayplanifica.cl",
     description:
       "Sitio web institucional para la difusión del Plan Regulador Comunal. Incluye resultados del proceso y contenido actualizado.",
