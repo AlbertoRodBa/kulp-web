@@ -8,7 +8,7 @@ export default function AnnouncementBar() {
   ];
 
   const chunk = (
-    <div className="flex items-center gap-5 px-8 text-[14px] font-light tracking-wide whitespace-nowrap italic">
+    <div className="flex items-center gap-5 px-8 text-[13px] font-light tracking-wide whitespace-nowrap">
       <span className="flex items-center gap-2">
         <span></span>
         <span>{items[0]}</span>
@@ -35,7 +35,7 @@ export default function AnnouncementBar() {
 
   return (
     <div className="bg-[#ebe7d9] text-black py-[11px] overflow-hidden w-full">
-      <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
+      <div className="flex w-max animate-marquee-slow hover:[animation-play-state:paused]">
         {[...Array(4)].map((_, i) => (
           <div key={i}>{chunk}</div>
         ))}
