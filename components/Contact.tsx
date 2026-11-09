@@ -153,14 +153,13 @@ export default function Contact() {
                   htmlFor="user_company"
                   className="text-xs uppercase tracking-[0.08em] text-[var(--ink-muted)]"
                 >
-                  Proyecto / Marca <span className="ml-1 opacity-50">*</span>
+                  Proyecto / Marca
                 </label>
 
                 <input
                   id="user_company"
                   name="user_company"
                   type="text"
-                  required
                   placeholder="Nombre de tu proyecto o marca"
                   className="bg-transparent border-b border-[var(--cream-300)] py-3 text-sm text-[var(--ink)] focus:border-[var(--ink)] outline-none"
                 />
