@@ -42,7 +42,7 @@ const services: ServiceOption[] = [
     label: "Actualización de contenidos",
     title: "Actualización de contenidos",
     description:
-      "Mantenemos tu sitio web actualizado con cambios en textos, imágenes, documentos, enlaces y otros contenidos.\n\nServicio disponible de forma mensual.",
+      "Mantenemos tu sitio web actualizado con cambios en textos, imágenes, documentos, enlaces y otros contenidos.\n\n",
     items: [
       "Actualización de textos e imágenes",
       "Carga y reemplazo de documentos",
@@ -77,7 +77,7 @@ export default function Chatbot() {
                 </p>
                 {!selectedService && (
                   <p className="mt-1 text-sm leading-relaxed text-[var(--ink-muted)]">
-                    ¿En qué podemos ayudarte?
+                    Conoce nuestros servicios y encuentra la mejor opción para tu proyecto.
                   </p>
                 )}
               </div>
