@@ -111,6 +111,16 @@ export default function PladeturyungayPage() {
             </button>
           ))}
         </div>
+
+          <div className="mt-10 flex justify-end">
+            <a
+              href="/portafolio"
+              className="inline-flex items-center gap-2 text-sm text-[var(--ink-muted)] transition-colors hover:text-[var(--ink)]"
+            >
+              <span aria-hidden="true">←</span>
+              Volver
+            </a>
+          </div>
       </section>
     </main>
 
