@@ -25,7 +25,7 @@ export default function PiimepPenaflorPage() {
       title="PIIMEP Peñaflor - Municipalidad de Peñaflor"
       description="Sitio web para informar sobre el Plan de Inversiones de Infraestructura, Movilidad y Espacio Público de Peñaflor, con información actualizada y un glosario."
       images={images}
-      backHref="/portafolio"
+      backHref="/#portafolio"
     />
   );
 }
