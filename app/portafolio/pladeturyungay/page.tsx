@@ -18,7 +18,7 @@ export default function PladeturyungayPage() {
       description="Sitio web para el Plan de Desarrollo Turístico de la Comuna de Yungay con el fin de brindar información relevante a los vecinos. El sitio incluyó secciones sobre el PLADETUR, noticias, actividades ciudadanas y un formulario de contacto para consultas."
       images={images}
       backHref="/#portafolio"
-      backLabel="Volver"
+      backLabel="Volver a Portafolio"
     />
   );
 }
