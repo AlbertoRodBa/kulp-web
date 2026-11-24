@@ -24,8 +24,8 @@ function ProjectCard({ project, isMobile }: { project: Project; isMobile: boolea
     >
       <a
         href={project.link}
-        target="_blank"
-        rel="noopener noreferrer"
+        target={project.link.startsWith("http") ? "_blank" : undefined}
+        rel={project.link.startsWith("http") ? "noopener noreferrer" : undefined}
         className="overflow-hidden flex-shrink-0 block"
       >
         <img
@@ -77,8 +77,8 @@ function ProjectCard({ project, isMobile }: { project: Project; isMobile: boolea
 
         <a
           href={project.link}
-          target="_blank"
-          rel="noopener noreferrer"
+          target={project.link.startsWith("http") ? "_blank" : undefined}
+          rel={project.link.startsWith("http") ? "noopener noreferrer" : undefined}
           className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.15em] font-medium text-[var(--ink-faint)] hover:text-[var(--ink)] transition-colors mt-auto"
         >
           Ver proyecto →

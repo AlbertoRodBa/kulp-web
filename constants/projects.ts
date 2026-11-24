@@ -26,7 +26,7 @@ export const projects = [
     client: "Municipalidad de Peñaflor",
     title: "PIIMEP Peñaflor",
     year: "2024",
-    link: "https://piimep.penaflor.cl",
+    link: "/portafolio/piimeppenaflor",
     description:
       "Sitio web para informar sobre el Plan de Inversiones de Infraestructura, Movilidad y espacio público de Peñaflor. Cuenta con información actualizada y glosario.",
     image: "/project-3-piimep-penaflor.jpg",

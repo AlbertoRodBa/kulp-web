@@ -26,7 +26,7 @@ const projects = [
     client: "Municipalidad de Peñaflor",
     title: "PIIMEP Peñaflor",
     year: "2024",
-    link: "https://piimep.penaflor.cl",
+    link: "/portafolio/piimeppenaflor",
     description:
       "Sitio web para informar sobre el plan de inversiones de infraestructura, movilidad y espacio público.",
     image: "/project-3-piimep-penaflor.jpg",
@@ -78,8 +78,8 @@ export default function PortafolioPage() {
               {/* Imagen */}
               <a
                 href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
+                target={project.link.startsWith("http") ? "_blank" : undefined}
+                rel={project.link.startsWith("http") ? "noopener noreferrer" : undefined}
                 className="block overflow-hidden rounded-lg border border-[var(--cream-300)]"
               >
                 <img
@@ -128,11 +128,11 @@ export default function PortafolioPage() {
                 <div className="mt-6">
                   <a
                     href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    target={project.link.startsWith("http") ? "_blank" : undefined}
+                    rel={project.link.startsWith("http") ? "noopener noreferrer" : undefined}
                     className="text-xs uppercase tracking-[0.15em] font-medium text-[var(--ink-faint)] hover:text-[var(--ink)] transition-colors duration-200 underline underline-offset-4 decoration-[var(--cream-300)] hover:decoration-[var(--ink)]"
                   >
-                    Visitar sitio →
+                    Ver proyecto →
                   </a>
                 </div>
               </div>
